@@ -39,6 +39,7 @@ export default {
     refreshArtists() {
       this.loading = true
       const self = this
+      this.artists = []
       getArtists(this.selectedCountry)
         .then(function (artists) {
           self.loading = false
